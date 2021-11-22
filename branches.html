@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Etiquetas SEO-->
+    <meta name="description" content="Wine" />
+    <meta name="keywords" content="wine, AESOP Wines, AESOP" />
+    <meta name="author" content="Micaela Dubini" />
+
+    <!--Etiquetas Fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!--Favicon
+    <link rel="shortcut icon" href="img/favicon.png" />-->
+
+    <!--TITULO-->
+    <title>Branches &mdash; AESOP</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="" class="logo">AESOP</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">Products</a></li>
+            <li><a href="branches.html">Branches</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <!--CONTENIDO -->
+    <main>
+        <section class="sucursal-portada">
+            <h1>Branches</h1>
+            <p>
+                A company dedicated to the marketing of drinks <br>
+                with
+                more than 20 years of experience in the Argentina market
+            </p>
+            </div>
+        </section>
+
+        <div class="sucursales">
+            <section class="sucursal-1">
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.405959071101!2d-58.361213724524205!3d-34.61918008755552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM3JzEwLjUiUyA1OMKwMjEnNDEuMSJX!5e0!3m2!1ses!2sar!4v1634434840296!5m2!1ses!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="sucursal-texto">
+                    <h3 class="" data-aos="fade-up">Puerto Madero Branch</h3>
+                    <p class="" data-aos="fade-up"><i class="fas fa-map-marker-alt"></i>Avenida de Mayo 657, Provincia
+                        de
+                        Buenos Aires, Argentina.</p>
+                    <p class="" data-aos="fade-up"><i class="fas fa-mobile-alt"></i>011 2543-2569</p>
+                </div>
+            </section>
+
+            <section class="sucursal-2">
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.405959071101!2d-58.361213724524205!3d-34.61918008755552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM3JzEwLjUiUyA1OMKwMjEnNDEuMSJX!5e0!3m2!1ses!2sar!4v1634434840296!5m2!1ses!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="sucursal-texto">
+                    <h3 class="" data-aos="fade-up"> Puerto Madero Branch</h3>
+                    <p class="" data-aos="fade-up"><i class="fas fa-map-marker-alt"></i>Avenida de Mayo 657, Provincia
+                        de
+                        Buenos Aires, Argentina.</p>
+                    <p class="" data-aos="fade-up"><i class="fas fa-mobile-alt"></i>011 2543-2569</p>
+                </div>
+            </section>
+        </div>
+
+        <form action="" id="idForm">
+            <div>
+               <h3>If you are not from Argentina, tell us where we should open our next store</h3>
+            </div>
+            <label for="Name">Name</label><br>
+            <input type="text" id="nombreC" name="nombreC"><br>
+            <label for="Last name">Last name</label><br>
+            <input type="text" id="apellidoC" name="apellidoC"><br>
+            <label for="Email">Email</label><br>
+            <input type="text" id="edadC" name="emailC"><br>
+            <label for="Place">Place</label><br>
+            <input type="text" id="lugarC" name="lugarC"><br><br>
+            <input type="submit" value="Send"><br><br>
+        </form>
+
+        <div class="botonBranch">
+            <button id="botonMostrarClientes">Show</button>
+        </div>
+
+        <div id="divClientes"></div>
+
+    </main>
+
+
+    <!-- PIE -->
+    <footer>
+        <div class="register">
+            <div>
+                <h3>Your first order is free!</h3>
+                <h4>Receive more info and offers</h4>
+            </div>
+
+            <form action="error404.html" method="GET">
+                <input type="text" name="email" placeholder="julieta@mail.com" required="">
+                <input type="submit" value="Sing up">
+            </form>
+        </div>
+
+        <div class="redes">
+            <h4>Contact us here</h4>
+
+            <div class="apps">
+                <a href="www.instagram.com"><img src="img/ig.png" alt="instagram"></a>
+                <a href="www.twitter.com"><img src="img/tw.png" alt="twitter"></a>
+                <a href="wwww.facebook.com"><img src="img/fb.png" alt="facebook"></a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
