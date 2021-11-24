@@ -82,39 +82,54 @@ main {
     }
 
     .tituloMejoresVinos {
+
         margin-top: 5rem;
         text-align: center;
-        .mejoresVinos {
+
+        #contenedorProdu {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-
             .item {
                 border: rgb(187, 186, 186) solid 1px;
                 font-size: 20px;
                 padding: 15px;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 max-width: 250px;
                 margin: 20px;
                 border-radius: 5px;
-                input {
-                    font-size: 13px;
+                img {
+                    max-height: 250px;
+                    border-radius: 5px;
                 }
-                .btn {
-                    font-size: 13px;
-                    margin-bottom: 12px;
+                button {
+                    border-radius: 2px;
+                    border-style: none;
+                    background-color: #000000;
+                    color: white;
+                    font-size: 18px;
                 }
-            }
-            img {
-                max-height: 250px;
             }
         }
     }
-    .formReco {
-        form {
-            text-align: center;
-            margin-top: 4rem;
+    #next {
+        text-align: center;
+        margin-top: 8rem;
+    }
+    #view {
+        justify-content: space-around;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+        .deluxe{
+            img{
+                width: 250px;
+            }
         }
     }
 }

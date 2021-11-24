@@ -49,34 +49,37 @@
 
 // form - brances
 body {
-    #idForm {
+    .container-formPlace {
         display: flex;
         flex-direction: column;
         text-align: center;
         padding: 8rem 15rem 0;
+        h5{
+            font-size: 10px;
+            visibility: hidden;
+        }
+
         @media screen and(max-width: 425px) {
             padding: 3rem 2rem 1rem;
         }
     }
-    .botonBranch {
-        text-align: center;
-        button {
-            border-style: inset;
-            border-bottom: solid 2px;
-            border-radius: 5px;
-            padding: 3px;
-            width: 65%;
-        }
-    }
-    #divClientes {
+    .card {
         display: flex;
         flex-direction: row;
         padding: 5rem 15rem;
         flex-wrap: wrap;
+        background: none;
+        border: none;
+        margin: 0;
+        h5{
+            font-size: 10px;
+            visibility: hidden;
+        }
         @media screen and(max-width: 425px) {
             padding: 3rem 2rem 1rem;
+
         }
-        .row-card {
+        .card-body {
             background-color: #000;
             border-radius: 5px;
             color: white;
@@ -84,6 +87,18 @@ body {
             @media screen and(max-width: 425px) {
                 padding: 3rem 2rem 1rem;
             }
+        }
+    }
+    .button-position {
+        display: flex;
+        justify-content: center;
+        button {
+            text-align: center;
+            border-style: inset;
+            border-bottom: solid 2px;
+            border-radius: 5px;
+            padding: 3px;
+            width: 65%;
         }
     }
 }
