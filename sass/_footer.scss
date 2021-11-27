@@ -2,8 +2,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: rgb(235, 235, 235);
+    background-color: rgba(0, 0, 0, 0.979);
     margin-top: 100px;
+    color: #ffffff;
 
     @media screen and(max-width: 768px) {
         flex-direction: column;

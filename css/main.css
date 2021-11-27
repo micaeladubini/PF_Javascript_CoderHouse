@@ -7894,7 +7894,8 @@ a {
 
 @media (min-width: 48em) {
   .header li {
-    float: left; }
+    float: left;
+    margin: 10px 10px 0px 0px; }
     .header li a {
       padding: 20px 30px; }
   .header .menu {
@@ -7992,8 +7993,9 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #ebebeb;
-  margin-top: 100px; }
+  background-color: rgba(0, 0, 0, 0.979);
+  margin-top: 100px;
+  color: #ffffff; }
   @media screen and (max-width: 768px) {
     footer {
       flex-direction: column;
@@ -8125,7 +8127,19 @@ h4, .h4 {
   border-radius: 0; }
 
 body {
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  color: black;
+  transition: background-color 800ms ease; }
+
+.dark {
+  background-color: black;
+  color: #f7f7f7; }
+
+#logoAnimate {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 5rem; }
 
 main .contenedor {
   background-image: url("../img/portada-wine.jpg");

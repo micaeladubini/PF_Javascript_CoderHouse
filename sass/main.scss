@@ -42,6 +42,21 @@ h4 {
 // Inicio
 body {
     background-color: $colorPrincipal;
+    color: black;
+    transition: background-color 800ms ease;
+}
+
+// botones - header
+.dark {
+    background-color: black;
+    color: $colorPrincipal;
+}
+
+#logoAnimate {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 5rem;
 }
 
 main {
@@ -126,8 +141,8 @@ main {
         flex-direction: row;
         flex-wrap: wrap-reverse;
         text-align: center;
-        .deluxe{
-            img{
+        .deluxe {
+            img {
                 width: 250px;
             }
         }

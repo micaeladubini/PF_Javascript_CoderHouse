@@ -34,7 +34,8 @@ for (const p of productos) {
       <h4>  ${p.precio} USD </h4>
       <h4> ${p.detalle} </h4>
       <button id="btn${p.id}">Comprar</button>
-      </div>`).css({ display: "flex" });
+      </div>
+     `).css({ display: "flex" });
 
     //Asociamos el evento a botón recién creado.
     $(`#btn${p.id}`).on('click', function () {
@@ -84,3 +85,56 @@ for (const s of surprises) {
     </div>
     ` ).css({ display: "flex" });
 }
+
+// dark - light mode
+let darkMode;
+
+if (localStorage.getItem('dark-mode')) {
+    darkMode = localStorage.getItem('dark-mode');
+} else {
+    darkMode = "light";
+}
+
+localStorage.setItem('dark-mode', darkMode);
+
+$(() => {
+    if (localStorage.getItem('dark-mode') == "dark") {
+        $('body').addClass("dark");
+        $('#boton-dark-mode').hide();
+        $('#boton-light-mode').show();
+    } else {
+        $('#boton-light-mode').hide();
+    }
+
+    //light mode
+    $('#boton-light-mode').click(() => {
+        $('#boton-light-mode').hide();
+        $('#boton-dark-mode').show();
+        $('body').removeClass("dark");
+
+        localStorage.setItem('dark-mode', "light");
+    })
+
+    //dark mode
+    $('#boton-dark-mode').click(() => {
+        $('#boton-light-mode').show();
+        $('#boton-dark-mode').hide();
+        $('body').addClass("dark");
+        localStorage.setItem('dark-mode', "dark");
+    })
+})
+
+
+const URLIMG = 'https://www.bayareamade.us/wp-content/uploads/2017/10/Aesop_Logo_Black.png';
+
+const DURACION = 8000;
+$('main').append(`<div id="logoAnimate" style="display:flex">
+                    <img id="logoBanner" src="${URLIMG}" width="200" height="40">
+                    <h3 id="textBanner">Follow us @aesop</h3>
+                  </div>`);
+$('#logoBanner')
+    .fadeOut(DURACION, () => { $("#textBanner").html("Follow us @aesop") })
+    .fadeIn(DURACION, () => { $("#textBanner").html("every week there is a gift for you") })
+    .animate({ opacity: 0.75,  width: "+=200", height: "+=40"},
+        DURACION,
+        () => { $("#textBanner").html("Follow us @aesop") });
