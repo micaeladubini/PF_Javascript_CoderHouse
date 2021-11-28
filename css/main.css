@@ -8182,10 +8182,11 @@ main .tituloMejoresVinos {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      max-width: 250px;
+      max-width: 200px;
       margin: 20px;
       border-radius: 5px; }
       main .tituloMejoresVinos #contenedorProdu .item img {
+        margin-bottom: 15px;
         max-height: 250px;
         border-radius: 5px; }
       main .tituloMejoresVinos #contenedorProdu .item button {

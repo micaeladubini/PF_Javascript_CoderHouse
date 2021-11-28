@@ -1,3 +1,4 @@
+
 //Index - Simulador agregar carrito
 class Producto {
     constructor(id, nombre, precio, detalle, img) {
@@ -22,9 +23,6 @@ productos.push(vino7 = new Producto(7, "2018 White Blend", 36, "Lorem ipsum dolo
 productos.push(vino8 = new Producto(8, "2017 Grenache", 65, "Lorem ipsum dolor, sit amet", "./img/vino8.jpg"));
 productos.push(vino9 = new Producto(9, "2017 Pinot Noir", 70, "Lorem ipsum dolor, sit amet", "./img/vino6.jpg"));
 productos.push(vino10 = new Producto(10, "2018 White Blend", 36, "Lorem ipsum dolor, sit amet", "./img/vino7.jpg"));
-productos.push(vino11 = new Producto(11, "2017 Grenache", 65, "Lorem ipsum dolor, sit amet", "./img/vino8.jpg"));
-productos.push(vino12 = new Producto(12, "2017 Pinot Noir", 70, "Lorem ipsum dolor, sit amet", "./img/vino2.jpg"));
-
 
 for (const p of productos) {
 
@@ -33,21 +31,28 @@ for (const p of productos) {
       <h4> ${p.nombre}</h4>
       <h4>  ${p.precio} USD </h4>
       <h4> ${p.detalle} </h4>
-      <button id="btn${p.id}">Comprar</button>
+      <button class="btn btn-success" id="btn${p.id}">Comprar</button>
       </div>
-     `).css({ display: "flex" });
+     `).css({ display: "flex"});
+
 
     //Asociamos el evento a botón recién creado.
-    $(`#btn${p.id}`).on('click', function () {
+    $(`#btn${p.id}`).on('click', () => {
+        new swal({
+            text: "Product added",
+            title: "Well Done!",
+            icon: "success"
+        })
         console.log(`Seleccionado: Comprar ${p.nombre} - total + IVA por producto: ${p.precio * 1.21.toFixed(2)}`);
-    });
+    }).css({ marginTop: "15px" });
 }
+
+
 
 console.log(productos);
 
 let pasoJson = JSON.stringify(productos);
 console.log(pasoJson);
-
 
 // 
 $("#next").prepend("<h2>Coming soon ... </h2>");
@@ -85,6 +90,8 @@ for (const s of surprises) {
     </div>
     ` ).css({ display: "flex" });
 }
+
+
 
 // dark - light mode
 let darkMode;
@@ -125,9 +132,10 @@ $(() => {
 })
 
 
+// animación logo en index y contact
 const URLIMG = 'https://www.bayareamade.us/wp-content/uploads/2017/10/Aesop_Logo_Black.png';
 
-const DURACION = 8000;
+const DURACION = 2000;
 $('main').append(`<div id="logoAnimate" style="display:flex">
                     <img id="logoBanner" src="${URLIMG}" width="200" height="40">
                     <h3 id="textBanner">Follow us @aesop</h3>
@@ -135,6 +143,9 @@ $('main').append(`<div id="logoAnimate" style="display:flex">
 $('#logoBanner')
     .fadeOut(DURACION, () => { $("#textBanner").html("Follow us @aesop") })
     .fadeIn(DURACION, () => { $("#textBanner").html("every week there is a gift for you") })
-    .animate({ opacity: 0.75,  width: "+=200", height: "+=40"},
+    .animate({ opacity: 0.75, width: "+=200", height: "+=40" },
         DURACION,
         () => { $("#textBanner").html("Follow us @aesop") });
+
+
+
