@@ -38,7 +38,7 @@
   <link rel="shortcut icon" href="img/favicon.png" />-->
 
   <!--TITULO-->
-  <title>AESOP</title>
+  <title>Shop &mdash; AESOP</title>
 </head>
 
 
@@ -50,7 +50,7 @@
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
       <li><a href="index.html">HOME</a></li>
-      <li><a href="shop.html">SHOP</a></li>
+      <li><a href="">SHOP</a></li>
       <li><a href="branches.html">BRANCHES</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="contact.html">CONTACT</a></li>
@@ -64,7 +64,7 @@
   <main>
 
     <section class="contenedor">
-      <h1>Aesop drinks</h1>
+      <h1>Shop</h1>
       <p>
         A company dedicated to the marketing of drinks <br>
         with
@@ -72,41 +72,27 @@
       </p>
     </section>
 
-    <div class="frase">
-      <div>
-        <h3>Better wine for all</h3>
-        <h2>made in Mendoza,</h2>
-        <h2>Argentina</h2>
+    <div class="container" data-aos="fade-up" data-aos-duration="2000">
+      <h2>Our best products</h2>
+      <div class="row">
+        <!-- Elementos generados a partir del JSON -->
+        <div id="items" class="col-sm-8 row"></div>
+        <!-- Carrito -->
+        <div class="col-sm-4 total">
+          <h2>Cart</h2>
+          <!-- Elementos del carrito -->
+          <ul id="carrito" class="list-group"></ul>
+          <hr>
+          <!-- Precio total -->
+          <p class="text-right">Total + IVA: <span id="total"></span>&dollar;</p>
+          <button id="boton-vaciar" class="btn btn-danger">Delete cart</button>
+          <button id="boton-vaciar" class="btn btn-danger">Purchase</button>
+        </div>
       </div>
     </div>
 
-    <div class="destacados" data-aos="fade-up" data-aos-duration="2000">
-      <div class="b1">
-        <img src="img/sustainable.png" alt="vino icono">
-        <h3>Sustainably farmed</h3>
-        <p>We source fruit from sustainably farmed vineyards throughout Northern Mendoza</p>
-      </div>
-      <div class="b2">
-        <img src="img/wine.png" alt="transporte icono">
-        <h3>By hand</h3>
-        <p>Our wines are made by hand in small batches
-          using minimal vinification techniques</p>
-      </div>
-      <div class="b3">
-        <img src="img/transport.png" alt="planta icono">
-        <h3>Directly to you</h3>
-        <p>We sell our wine direct to help keep prices as low as possible</p>
-      </div>
-    </div>
+    <button class="cart"><i class="fas fa-shopping-cart fa-lg" ;></i></button>
 
-
-    <div id="current" data-aos="fade-up" data-aos-duration="2000">
-      <div id="wines" ></div>
-      <button><a href="shop.html">Shop</a></button>
-    </div>
-
-    <div id="next"></div>
-    <div id="view" data-aos="zoom-in" data-aos-duration="2000"></div>
 
   </main>
 
@@ -153,6 +139,7 @@
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/app.js"> </script>
+  <script src="js/functions.js"> </script>
 
 </body>
 

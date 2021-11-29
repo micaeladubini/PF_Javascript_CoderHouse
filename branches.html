@@ -40,11 +40,13 @@
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">Products</a></li>
-            <li><a href="branches.html">Branches</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="">SHOP</a></li>
+            <li><a href="branches.html">BRANCHES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><button class="btn btn-dark" id="boton-dark-mode"><i class="fas fa-moon"></i></button></li>
+            <li><button class="btn btn-light" id="boton-light-mode"><i class="fas fa-sun"></i></button></li>
         </ul>
     </header>
 
@@ -92,29 +94,6 @@
             </section>
         </div>
 
-        <div class="container-formPlace">
-            <h3>If you're not from Argentina, tell us where we should open our next store</h3>
-            <form id="formPlace">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
-                </div>
-                <div class="mb-3">
-                    <label for="place" class="form-label">Place 1</label>
-                    <input type="text" class="form-control" id="place" name="place">
-                </div>
-                <div class="mb-3">
-                    <label for="place2" class="form-label">Place 2</label>
-                    <input type="text" class="form-control" id="place2" name="place2">
-                </div>
-                <button type="submit" class="btn btn-primary">Send Options</button><br><br>
-            </form>
-        </div>
-
-        <div class="button-position">
-            <button id="boton1">Show me</button>
-        </div>
-        <div id="places" class="row"></div>
     </main>
 
 
@@ -126,10 +105,11 @@
                 <h4>Receive more info and offers</h4>
             </div>
 
-            <form action="error404.html" method="GET">
-                <input type="text" name="email" placeholder="julieta@mail.com" required="">
-                <input type="submit" value="Sing up">
-            </form>
+            <form id="my-form" action="https://formspree.io/f/xleaqnop" method="POST">
+                <input type="email" name="email" placeholder="julieta@email.com" required>
+                <input id="my-form-button" type="submit" value="Sign up">
+                <p id="my-form-status"></p>
+              </form>
         </div>
 
         <div class="redes">

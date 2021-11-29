@@ -7905,7 +7905,7 @@ a {
   .header .menu-icon {
     display: none; } }
 
-.contact-body .contact-me {
+.contact-body {
   height: 100vh; }
   .contact-body .contact-me form {
     background: #fb9e84a4;
@@ -7913,7 +7913,7 @@ a {
     border-radius: 20px;
     display: block;
     width: 400px;
-    height: 500px;
+    height: 300px;
     padding: 20px; }
     @media screen and (max-width: 375px) {
       .contact-body .contact-me form {
@@ -7925,23 +7925,15 @@ a {
       display: flex;
       flex-direction: column;
       text-align: center; }
-      .contact-body .contact-me form .complete .datos-usuario {
-        display: flex;
-        flex-direction: column;
-        margin: 35px 0; }
-        .contact-body .contact-me form .complete .datos-usuario input {
-          padding-left: 7px; }
-      .contact-body .contact-me form .complete .news {
-        display: flex;
-        flex-direction: row;
-        margin: 20px 0;
-        align-items: center;
-        justify-content: center; }
-        .contact-body .contact-me form .complete .news .quiero {
-          margin-right: 15px; }
-      .contact-body .contact-me form .complete textarea {
-        max-height: 180px;
-        padding-left: 7px; }
+      .contact-body .contact-me form .complete button {
+        margin-bottom: 10px;
+        margin-top: 15px;
+        border-style: none;
+        border-radius: 2px; }
+      .contact-body .contact-me form .complete input {
+        margin-bottom: 10px;
+        border-style: none;
+        border-radius: 2px; }
 
 body .container-formPlace {
   display: flex;
@@ -8051,7 +8043,7 @@ footer {
   grid-template-columns: repeat(3, 25vw);
   grid-template-rows: 30vh;
   gap: 50px;
-  padding: 30px 0;
+  padding: 3rem 0 0 0;
   text-align: center;
   justify-content: center;
   grid-template-areas: "b1 b2 b3"; }
@@ -8113,6 +8105,17 @@ h4, .h4 {
   margin: 0;
   font-size: 17px; }
 
+.cart {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  border-style: none;
+  border-radius: 3px;
+  height: 2rem;
+  width: 2rem; }
+  .cart i {
+    color: black; }
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px; }
@@ -8134,6 +8137,11 @@ body {
 .dark {
   background-color: black;
   color: #f7f7f7; }
+  .dark header {
+    background-color: #f7f7f7;
+    font-weight: 500; }
+    .dark header a {
+      color: black; }
 
 #logoAnimate {
   flex-direction: column;
@@ -8168,40 +8176,40 @@ main .frase {
     main .frase {
       padding: 100px 20px; } }
 
-main .tituloMejoresVinos {
-  margin-top: 5rem;
-  text-align: center; }
-  main .tituloMejoresVinos #contenedorProdu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
-    main .tituloMejoresVinos #contenedorProdu .item {
-      border: #bbbaba solid 1px;
-      font-size: 20px;
-      padding: 15px;
+main .container {
+  text-align: center;
+  margin-top: 5rem; }
+  main .container h2, main .container .h2 {
+    margin-bottom: 1rem; }
+  main .container .row {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0; }
+    main .container .row .total {
+      text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      max-width: 200px;
-      margin: 20px;
-      border-radius: 5px; }
-      main .tituloMejoresVinos #contenedorProdu .item img {
-        margin-bottom: 15px;
-        max-height: 250px;
-        border-radius: 5px; }
-      main .tituloMejoresVinos #contenedorProdu .item button {
-        border-radius: 2px;
-        border-style: none;
-        background-color: #000000;
-        color: white;
-        font-size: 18px; }
+      justify-content: center;
+      width: 100%; }
+    main .container .row .card {
+      padding: 1rem; }
+      main .container .row .card .card-body {
+        color: black;
+        background-color: #f7f7f7;
+        border-radius: 5px;
+        border: 1px black solid; }
+        main .container .row .card .card-body h5, main .container .row .card .card-body .h5 {
+          visibility: visible;
+          font-size: 18px;
+          margin-top: 10px; }
 
 main #next {
   text-align: center;
   margin-top: 8rem; }
 
 main #view {
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 1.5rem;
   flex-wrap: wrap;
   display: flex;
@@ -8209,7 +8217,32 @@ main #view {
   flex-wrap: wrap-reverse;
   text-align: center; }
   main #view .deluxe img {
-    width: 250px; }
+    width: 250px;
+    border-radius: 2px; }
+
+main #current {
+  margin-top: 200px;
+  text-align: center;
+  padding: 0 200px; }
+  main #current button {
+    margin-top: 2rem;
+    background: black;
+    border-style: none;
+    border-radius: 200px;
+    padding: 0.7rem; }
+    main #current button a {
+      text-decoration: none;
+      color: #f7f7f7; }
+  main #current h2, main #current .h2 {
+    margin-bottom: 2rem; }
+  main #current #wines {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    main #current #wines img {
+      width: 250px; }
+    main #current #wines h3, main #current #wines .h3 {
+      padding-top: 1rem; }
 
 .sucursal-portada {
   background-image: url("../img/Aesop_Wines_01.jpg");

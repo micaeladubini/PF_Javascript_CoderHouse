@@ -24,6 +24,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
 
+  <!--Etiquetas AOS Animation-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <!--CSS-->
   <link rel="stylesheet" href="css/main.css" />
 
@@ -40,11 +43,13 @@
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#about">Products</a></li>
-      <li><a href="branches.html">Branches</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="">SHOP</a></li>
+      <li><a href="branches.html">BRANCHES</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><button class="btn btn-dark" id="boton-dark-mode"><i class="fas fa-moon"></i></button></li>
+      <li><button class="btn btn-light" id="boton-light-mode"><i class="fas fa-sun"></i></button></li>
     </ul>
   </header>
 
@@ -59,7 +64,7 @@
     </div>
     <div class="us-contenedor">
       <div class="us-info top">
-        <img src="img/Aesop_Wine_Club.png" alt="Wine Club">
+        <img src="img/Aesop_Wine_Club.png" alt="Wine Club"  data-aos="zoom-in" data-aos-duration="1000">
         <div>
           <h3>Wine Club</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam atque sit, eum ut dolore
@@ -68,7 +73,7 @@
         </div>
       </div>
       <div class="us-info reverse">
-        <img class="nature" src="img/Aesop_Wine_Club-2.png" alt="Wine Club">
+        <img class="nature" src="img/Aesop_Wine_Club-2.png" alt="Wine Club"  data-aos="zoom-in" data-aos-duration="1000">
         <div>
           <h3>Wine Club</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam atque sit, eum ut dolore
@@ -83,7 +88,7 @@
     </div>
     <div class="us-contenedor2">
       <div class="us-info">
-        <img src="img/Aesop_Wine_Club.png" alt="Wine Club">
+        <img src="img/Aesop_Wine_Club.png" alt="Wine Club"  data-aos="zoom-in" data-aos-duration="1000">
         <div>
           <h3>Agustín Cavallo</h3>
           <p> — Winemaker</p>
@@ -93,7 +98,7 @@
         </div>
       </div>
       <div class="us-info reverse">
-        <img class="nature" src="img/Aesop_Wine_Club-2.png" alt="Wine Club">
+        <img class="nature" src="img/Aesop_Wine_Club-2.png" alt="Wine Club"  data-aos="zoom-in" data-aos-duration="1000">
         <div>
           <h3>Lucas Araoz </h3>
           <p> — Co-founder</p>
@@ -114,9 +119,10 @@
         <h4>Receive more info and offers</h4>
       </div>
 
-      <form action="error404.html" method="GET">
-        <input type="text" name="email" placeholder="julieta@mail.com" required="">
-        <input type="submit" value="Sing up">
+      <form id="my-form" action="https://formspree.io/f/xleaqnop" method="POST">
+        <input type="email" name="email" placeholder="julieta@email.com" required>
+        <input id="my-form-button" type="submit" value="Sign up">
+        <p id="my-form-status"></p>
       </form>
     </div>
 
@@ -131,6 +137,14 @@
     </div>
 
   </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/app.js"> </script>
 
 </body>
 

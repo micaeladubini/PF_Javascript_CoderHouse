@@ -24,6 +24,20 @@ h4 {
     font-size: 17px;
 }
 
+// fixed
+.cart {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border-style: none;
+    border-radius: 3px;
+    height: 2rem;
+    width: 2rem;
+    i {
+        color: black;
+    }
+}
+
 // scroll
 @at-root::-webkit-scrollbar {
     width: 5px;
@@ -46,12 +60,21 @@ body {
     transition: background-color 800ms ease;
 }
 
-// botones - header
+
+// botones dark y light - header
 .dark {
     background-color: black;
     color: $colorPrincipal;
+    header {
+        background-color: $colorPrincipal;
+        font-weight: 500;
+        a {
+            color: black;
+        }
+    }
 }
 
+// aesop animate
 #logoAnimate {
     flex-direction: column;
     text-align: center;
@@ -95,37 +118,36 @@ main {
             padding: 100px 20px;
         }
     }
-
-    .tituloMejoresVinos {
-
-        margin-top: 5rem;
+    .container {
         text-align: center;
-
-        #contenedorProdu {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            .item {
-                border: rgb(187, 186, 186) solid 1px;
-                font-size: 20px;
-                padding: 15px;
+        margin-top: 5rem;
+        h2 {
+            margin-bottom: 1rem;
+        }
+        .row {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0;
+            .total {
+                text-align: center;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                max-width: 200px;
-                margin: 20px;
-                border-radius: 5px;
-                img {
-                    margin-bottom: 15px;
-                    max-height: 250px;
+                justify-content: center;
+                width: 100%;
+            }
+            .card {
+                padding: 1rem;
+                .card-body {
+                     h5{
+                        visibility: visible;
+                        font-size: 18px;
+                        margin-top: 10px;
+                     }
+                    color: black;
+                    background-color: $colorPrincipal;
                     border-radius: 5px;
-                }
-                button {
-                    border-radius: 2px;
-                    border-style: none;
-                    background-color: #000000;
-                    color: white;
-                    font-size: 18px;
+                    border: 1px black solid;
                 }
             }
         }
@@ -135,7 +157,7 @@ main {
         margin-top: 8rem;
     }
     #view {
-        justify-content: space-around;
+        justify-content: space-evenly;
         margin-top: 1.5rem;
         flex-wrap: wrap;
         display: flex;
@@ -145,12 +167,43 @@ main {
         .deluxe {
             img {
                 width: 250px;
+                border-radius: 2px;
+            }
+        }
+    }
+    #current {
+        margin-top: 200px;
+        text-align: center;
+        padding: 0 200px;
+        button {
+            margin-top: 2rem;
+            background: black;
+            border-style: none;
+            border-radius: 200px;
+            padding: 0.7rem;
+            a {
+                text-decoration: none;
+                color: $colorPrincipal;
+            }
+        }
+        h2 {
+            margin-bottom: 2rem;
+        }
+        #wines {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            img {
+                width: 250px;
+            }
+            h3 {
+                padding-top: 1rem;
             }
         }
     }
 }
 
-// sucursales
+// branches-sucursales
 .sucursal-portada {
     background-image: url('../img/Aesop_Wines_01.jpg');
     height: 100vh;
@@ -254,7 +307,6 @@ main {
             }
         }
     }
-
     .top {
         padding-top: 100px;
     }
