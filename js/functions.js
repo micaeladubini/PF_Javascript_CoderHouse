@@ -33,30 +33,31 @@ window.onload = function () {
             imagen: './img/vino5.jpg'
         },
         {
-            id: 4,
+            id: 5,
             nombre: 'Bubble white',
             precio: 30,
             imagen: './img/vino6.jpg'
         },
         {
-            id: 5,
+            id: 6,
             nombre: 'Pinot Noir 2014',
             precio: 36,
             imagen: './img/vino7.jpg'
         },
         {
-            id: 6,
+            id: 7,
             nombre: 'Pinot Noir 2020',
             precio: 50,
             imagen: './img/vino8.jpg'
         },
         {
-            id: 7,
+            id: 8,
             nombre: 'Pinot Noir 2014',
             precio: 60,
             imagen: './img/vino9.jpg'
         }
     ];
+    console.log(baseDeDatos);
 
     let carrito = [];
     let total = 0;
@@ -66,7 +67,6 @@ window.onload = function () {
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
     const miLocalStorage = window.localStorage;
 
-    // Funciones
     // Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
     function renderizarProductos() {
         baseDeDatos.forEach((info) => {
@@ -94,6 +94,15 @@ window.onload = function () {
             miNodoBoton.textContent = '+';
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+            miNodoBoton.addEventListener('click', ()=>{
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Added',
+                    timer: 1600,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                })
+            });
             // Insertamos
             miNodoCardBody.appendChild(miNodoImagen);
             miNodoCardBody.appendChild(miNodoTitle);
@@ -114,6 +123,7 @@ window.onload = function () {
         renderizarCarrito();
         // Actualizamos el LocalStorage
         guardarCarritoEnLocalStorage();
+
     }
 
     // Dibuja todos los productos guardados en el carrito
@@ -145,6 +155,15 @@ window.onload = function () {
             miBoton.style.marginLeft = '1rem';
             miBoton.dataset.item = item;
             miBoton.addEventListener('click', borrarItemCarrito);
+            miBoton.addEventListener('click', () =>{
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Removed',
+                    timer: 1600,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                })
+            });
             // Mezclamos nodos
             miNodo.appendChild(miBoton);
             DOMcarrito.appendChild(miNodo);
@@ -187,12 +206,12 @@ window.onload = function () {
     function vaciarCarrito() {
         // Limpiamos los productos guardados
         carrito = [];
+        console.log("carrito eliminado");
         // Renderizamos los cambios
         renderizarCarrito();
         calcularTotal();
         // Borra LocalStorage
         localStorage.clear();
-
     }
 
     function guardarCarritoEnLocalStorage() {
@@ -208,7 +227,16 @@ window.onload = function () {
     }
 
     // Eventos
-    DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+    DOMbotonVaciar.addEventListener('click', vaciarCarrito)
+    DOMbotonVaciar.addEventListener('click', () =>{
+        Swal.fire({
+            icon: 'warning',
+            title: 'Cart Removed',
+            timer: 1600,
+            timerProgressBar: true,
+            showConfirmButton: false,
+        })
+    })
 
     // Inicio
     cargarCarritoDeLocalStorage();
@@ -216,7 +244,6 @@ window.onload = function () {
     calcularTotal();
     renderizarCarrito();
 }
-
 //Se oculta cart hasta que se aprieta botón 
 $('.total').hide();
 
