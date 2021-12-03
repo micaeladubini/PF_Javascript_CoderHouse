@@ -79,7 +79,7 @@
         <div id="items" class="col-sm-8 row"></div>
         <!-- Carrito -->
         <div class="col-sm-4 total">
-          <h2>Cart</h2>
+          <h2 id="cart">Cart</h2>
           <!-- Elementos del carrito -->
           <ul id="carrito" class="list-group"></ul>
           <hr>
@@ -91,7 +91,7 @@
       </div>
     </div>
 
-    <button class="cart"><i class="fas fa-shopping-cart fa-lg" ;></i></button>
+    <button class="cart"><a href="#cart"><i class="fas fa-shopping-cart fa-lg"></i></a></button>
 
 
   </main>
@@ -136,8 +136,9 @@
   <script>
     AOS.init();
   </script>
-
+  
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script src="js/app.js"> </script>
   <script src="js/functions.js"> </script>
 
