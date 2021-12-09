@@ -40,8 +40,8 @@ const URLIMG = 'https://www.bayareamade.us/wp-content/uploads/2017/10/Aesop_Logo
 
 const DURACION = 2000;
 $('main').append(`<div id="logoAnimate" style="display:flex">
-                    <img id="logoBanner" src="${URLIMG}" width="200" height="40">
-                    <h3 id="textBanner">Follow us @aesop</h3>
+                    <img id="logoBanner" src="${URLIMG}" width="200" height="40" alt="AESOP Logo">
+                    <h5 id="textBanner">follow us @aesop</h5>
                   </div>`);
 $('#logoBanner')
     .fadeOut(DURACION, () => { $("#textBanner").html("Follow us @aesop") })
@@ -127,7 +127,7 @@ const surprises = [{
 for (const s of surprises) {
     $("#view").append(`<div class="deluxe"><h3>
     Deluxe</h3>
-    <img src= ${s.img}>
+    <img src= ${s.img} alt="Deluxe AESOP Wine">
     <h4> Name: ${s.name}</h4>
     <h4> Type: ${s.type} </h4>
     <h4> Alcohol: ${s.alcohol} </h4>
@@ -135,3 +135,9 @@ for (const s of surprises) {
     ` ).css({ display: "flex" });
 }
 
+//Alt en imágenes
+$(document).ready(function() {
+    $("img").each(function() {
+       $(this).attr("alt", $(this).attr("AESOP Wine"));
+    });
+  });

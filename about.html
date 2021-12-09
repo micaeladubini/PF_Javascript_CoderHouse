@@ -12,7 +12,6 @@
   <meta name="author" content="Micaela Dubini" />
 
   <!--Etiquetas Fonts-->
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -24,14 +23,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <!--Etiquetas AOS Animation-->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!--CSS-->
   <link rel="stylesheet" href="css/main.css" />
 
-  <!--Favicon
-  <link rel="shortcut icon" href="img/favicon.png" />-->
+  <!--Favicon-->
+  <link rel="shortcut icon" href="img/favicon.png">
 
   <!--TITULO-->
   <title>About us &mdash; AESOP</title>
@@ -44,7 +48,7 @@
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
       <li><a href="index.html">HOME</a></li>
-      <li><a href="">SHOP</a></li>
+      <li><a href="shop.html">SHOP</a></li>
       <li><a href="branches.html">BRANCHES</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="contact.html">CONTACT</a></li>
@@ -54,17 +58,12 @@
   </header>
 
   <main>
-    <div class="us-portada">
-      <h1>Aesop drinks</h1>
-      <p>
-        A company dedicated to the marketing of drinks <br>
-        with
-        more than 20 years of experience in the Argentina market
-      </p>
+    <div class="contenedor" id="us">
+      <h1>About Us</h1>
     </div>
     <div class="us-contenedor">
       <div class="us-info top">
-        <img src="img/Aesop_Wine_Club.png" alt="Wine Club"  data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/Aesop_Wine_Club.png" alt="Wine Club" data-aos="zoom-in" data-aos-duration="1000">
         <div>
           <h3>Wine Club</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam atque sit, eum ut dolore
@@ -73,7 +72,7 @@
         </div>
       </div>
       <div class="us-info reverse">
-        <img class="nature" src="img/Aesop_Wine_Club-2.png" alt="Wine Club"  data-aos="zoom-in" data-aos-duration="1000">
+        <img class="nature" src="img/Aesop_Wine_Club-2.png" alt="Wine Club" data-aos="zoom-in" data-aos-duration="1000">
         <div>
           <h3>Wine Club</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam atque sit, eum ut dolore
@@ -88,7 +87,7 @@
     </div>
     <div class="us-contenedor2">
       <div class="us-info">
-        <img src="img/Aesop_Wine_Club.png" alt="Wine Club"  data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/Aesop_Wine_Club.png" alt="Wine Club" data-aos="zoom-in" data-aos-duration="1000">
         <div>
           <h3>Agustín Cavallo</h3>
           <p> — Winemaker</p>
@@ -98,7 +97,7 @@
         </div>
       </div>
       <div class="us-info reverse">
-        <img class="nature" src="img/Aesop_Wine_Club-2.png" alt="Wine Club"  data-aos="zoom-in" data-aos-duration="1000">
+        <img class="nature" src="img/Aesop_Wine_Club-2.png" alt="Wine Club" data-aos="zoom-in" data-aos-duration="1000">
         <div>
           <h3>Lucas Araoz </h3>
           <p> — Co-founder</p>
@@ -108,8 +107,6 @@
         </div>
       </div>
   </main>
-
-
 
   <!-- PIE -->
   <footer>
@@ -128,23 +125,29 @@
 
     <div class="redes">
       <h4>Contact us here</h4>
-
       <div class="apps">
         <a href="www.instagram.com"><img src="img/ig.png" alt="instagram"></a>
         <a href="www.twitter.com"><img src="img/tw.png" alt="twitter"></a>
         <a href="wwww.facebook.com"><img src="img/fb.png" alt="facebook"></a>
       </div>
     </div>
-
   </footer>
+
+  <!-- SCRIPTS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/form.js"> </script>
   <script src="js/app.js"> </script>
-
 </body>
+
 </html>

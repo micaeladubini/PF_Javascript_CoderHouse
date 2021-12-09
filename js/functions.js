@@ -27,36 +27,36 @@ window.onload = function () {
             imagen: './img/vino4.jpg'
         },
         {
-            id: 4,
+            id: 5,
             nombre: 'Bubble rose',
             precio: 52,
             imagen: './img/vino5.jpg'
         },
         {
-            id: 5,
+            id: 6,
             nombre: 'Bubble white',
             precio: 30,
             imagen: './img/vino6.jpg'
         },
         {
-            id: 6,
+            id: 7,
             nombre: 'Pinot Noir 2014',
             precio: 36,
             imagen: './img/vino7.jpg'
         },
         {
-            id: 7,
+            id: 8,
             nombre: 'Pinot Noir 2020',
             precio: 50,
             imagen: './img/vino8.jpg'
         },
         {
-            id: 8,
+            id: 9,
             nombre: 'Pinot Noir 2014',
             precio: 60,
             imagen: './img/vino9.jpg'
         }
-    ];
+    ]
     console.log(baseDeDatos);
 
     let carrito = [];
@@ -77,7 +77,7 @@ window.onload = function () {
             const miNodoCardBody = document.createElement('div');
             miNodoCardBody.classList.add('card-body');
             // Titulo
-            const miNodoTitle = document.createElement('h5');
+            const miNodoTitle = document.createElement('h4');
             miNodoTitle.classList.add('card-title');
             miNodoTitle.textContent = info.nombre;
             // Imagen
@@ -94,7 +94,7 @@ window.onload = function () {
             miNodoBoton.textContent = '+';
             miNodoBoton.setAttribute('marcador', info.id);
             miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-            miNodoBoton.addEventListener('click', ()=>{
+            miNodoBoton.addEventListener('click', () => {
                 Swal.fire({
                     icon: 'success',
                     title: 'Added',
@@ -155,7 +155,7 @@ window.onload = function () {
             miBoton.style.marginLeft = '1rem';
             miBoton.dataset.item = item;
             miBoton.addEventListener('click', borrarItemCarrito);
-            miBoton.addEventListener('click', () =>{
+            miBoton.addEventListener('click', () => {
                 Swal.fire({
                     icon: 'warning',
                     title: 'Removed',
@@ -219,7 +219,7 @@ window.onload = function () {
     }
 
     function cargarCarritoDeLocalStorage() {
-        // ¿Existe un carrito previo guardado en LocalStorage?
+        // 
         if (miLocalStorage.getItem('carrito') !== null) {
             // Carga la información
             carrito = JSON.parse(miLocalStorage.getItem('carrito'));
@@ -228,7 +228,7 @@ window.onload = function () {
 
     // Eventos
     DOMbotonVaciar.addEventListener('click', vaciarCarrito)
-    DOMbotonVaciar.addEventListener('click', () =>{
+    DOMbotonVaciar.addEventListener('click', () => {
         Swal.fire({
             icon: 'warning',
             title: 'Cart Removed',
@@ -244,6 +244,7 @@ window.onload = function () {
     calcularTotal();
     renderizarCarrito();
 }
+
 //Se oculta cart hasta que se aprieta botón 
 $('.total').hide();
 

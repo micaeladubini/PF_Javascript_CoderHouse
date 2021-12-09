@@ -4,24 +4,21 @@
     grid-template-columns: repeat(3, 25vw);
     grid-template-rows: 30vh;
     gap: 50px;
-    padding: 3rem 0 0 0;
+    padding: 3rem 0 0;
     text-align: center;
     justify-content: center;
-
     grid-template-areas: "b1 b2 b3";
 
     @media screen and(max-width: 425px) {
         grid-template-columns: 50vw;
         grid-template-rows: repeat(3, 50vh);
         grid-template-areas: "b1" "b2" "b3";
-        padding: 0px;
+        padding: 0;
         justify-content: center;
     }
-
     @media screen and(min-width: 426px) and(max-width: 768px) {
         padding: 50px 0;
     }
-
     .b1 {
         grid-area: b1;
         @media screen and(max-width: 425px) {

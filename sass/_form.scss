@@ -3,7 +3,7 @@
     height: 100vh;
     .contact-me {
         form {
-            background: $colorSecundario; // ver//
+            background: $colorSecundario;
             border-style: none;
             border-radius: 20px;
             display: block;
@@ -17,9 +17,7 @@
                 width: 350px;
             }
             .complete {
-                display: flex;
-                flex-direction: column;
-                text-align: center;
+                @include flex(flex, column, center);
                 button {
                     margin-bottom: 10px;
                     margin-top: 15px;
@@ -31,7 +29,6 @@
                     border-style: none;
                     border-radius: 2px;
                 }
-
             }
         }
     }
@@ -40,22 +37,18 @@
 // form - branches
 body {
     .container-formPlace {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+        @include flex(flex, column, center);
         padding: 8rem 15rem 0;
         h5 {
             font-size: 10px;
             visibility: hidden;
         }
-
         @media screen and(max-width: 425px) {
             padding: 3rem 2rem 1rem;
         }
     }
     .card {
-        display: flex;
-        flex-direction: row;
+        @include flex(flex, row, none);
         padding: 5rem 15rem;
         flex-wrap: wrap;
         background: none;
@@ -70,9 +63,9 @@ body {
 
         }
         .card-body {
-            background-color: #000;
+            background-color: $black;
             border-radius: 5px;
-            color: white;
+            color: $colorPrincipal;
             padding: 2rem;
             @media screen and(max-width: 425px) {
                 padding: 3rem 2rem 1rem;

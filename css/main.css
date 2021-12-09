@@ -7804,12 +7804,19 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
+.dark .contenedor, main .contenedor {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
 body {
   font-family: "Quicksand", sans-serif;
   height: 100%; }
 
 a {
-  color: white; }
+  color: #f7f7f7; }
 
 .header {
   background-color: #fb9e84a4;
@@ -7827,16 +7834,16 @@ a {
   .header li a {
     display: flex;
     justify-content: center;
-    padding: 0px 20px 30px 20px;
+    padding: 0 20px 30px;
     text-decoration: none;
-    color: white; }
+    color: #f7f7f7; }
     .header li a:hover {
       color: rgba(0, 0, 0, 0.801);
       font-weight: 700; }
   .header .menu-btn {
     display: none; }
     .header .menu-btn:hover {
-      background-color: #f4f4f4; }
+      background-color: #f7f7f7; }
     .header .menu-btn:checked ~ .menu {
       max-height: 400px; }
     .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -7874,7 +7881,7 @@ a {
       transition: background 0.2s ease-out;
       width: 18px; }
       .header .menu-icon .navicon:before {
-        background: white;
+        background: #f7f7f7;
         content: "";
         display: block;
         height: 100%;
@@ -7883,7 +7890,7 @@ a {
         width: 100%;
         top: 5px; }
       .header .menu-icon .navicon:after {
-        background: white;
+        background: #f7f7f7;
         content: "";
         display: block;
         height: 100%;
@@ -7895,7 +7902,7 @@ a {
 @media (min-width: 48em) {
   .header li {
     float: left;
-    margin: 10px 10px 0px 0px; }
+    margin: 10px 10px 0 0; }
     .header li a {
       padding: 20px 30px; }
   .header .menu {
@@ -7904,6 +7911,10 @@ a {
     max-height: none; }
   .header .menu-icon {
     display: none; } }
+
+.dark #h1 label {
+  background-color: #000;
+  border-radius: 100px; }
 
 .contact-body {
   height: 100vh; }
@@ -7950,6 +7961,7 @@ body .container-formPlace {
 body .card {
   display: flex;
   flex-direction: row;
+  text-align: none;
   padding: 5rem 15rem;
   flex-wrap: wrap;
   background: none;
@@ -7964,7 +7976,7 @@ body .card {
   body .card .card-body {
     background-color: #000;
     border-radius: 5px;
-    color: white;
+    color: #f7f7f7;
     padding: 2rem; }
     @media screen and (max-width: 425px) {
       body .card .card-body {
@@ -7985,20 +7997,24 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: rgba(0, 0, 0, 0.979);
+  align-items: none;
+  background-color: #000;
   margin-top: 100px;
-  color: #ffffff; }
+  color: #f7f7f7; }
   @media screen and (max-width: 768px) {
     footer {
+      display: flex;
       flex-direction: column;
-      text-align: center;
-      align-items: center; } }
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center; } }
   footer .register {
     padding: 30px 0 50px 100px;
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-items: none; }
     @media screen and (max-width: 768px) {
       footer .register {
         flex-direction: column;
@@ -8010,7 +8026,9 @@ footer {
       flex-direction: row; }
       @media screen and (max-width: 768px) {
         footer .register form {
+          display: flex;
           flex-direction: column;
+          justify-content: center;
           align-items: center;
           padding-top: 10px; } }
       footer .register form input {
@@ -8043,7 +8061,7 @@ footer {
   grid-template-columns: repeat(3, 25vw);
   grid-template-rows: 30vh;
   gap: 50px;
-  padding: 3rem 0 0 0;
+  padding: 3rem 0 0;
   text-align: center;
   justify-content: center;
   grid-template-areas: "b1 b2 b3"; }
@@ -8052,7 +8070,7 @@ footer {
       grid-template-columns: 50vw;
       grid-template-rows: repeat(3, 50vh);
       grid-template-areas: "b1" "b2" "b3";
-      padding: 0px;
+      padding: 0;
       justify-content: center; } }
   @media screen and (min-width: 426px) and (max-width: 768px) {
     .destacados {
@@ -8105,6 +8123,9 @@ h4, .h4 {
   margin: 0;
   font-size: 17px; }
 
+h5, .h5 {
+  font-size: 15px; }
+
 .cart {
   position: fixed;
   bottom: 1rem;
@@ -8114,7 +8135,7 @@ h4, .h4 {
   height: 2rem;
   width: 2rem; }
   .cart i {
-    color: black; }
+    color: rgba(0, 0, 0, 0.801); }
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -8122,7 +8143,7 @@ h4, .h4 {
 
 ::-webkit-scrollbar-thumb {
   background: #f7f7f7;
-  border: 10px solid #000000;
+  border: 10px solid rgba(0, 0, 0, 0.801);
   border-radius: 30px; }
 
 ::-webkit-scrollbar-track {
@@ -8131,77 +8152,100 @@ h4, .h4 {
 
 body {
   background-color: #f7f7f7;
-  color: black;
+  color: rgba(0, 0, 0, 0.801);
   transition: background-color 800ms ease; }
 
 .dark {
-  background-color: black;
+  background-color: #000;
   color: #f7f7f7; }
   .dark header {
     background-color: #f7f7f7;
     font-weight: 500; }
     .dark header a {
-      color: black; }
+      color: rgba(0, 0, 0, 0.801); }
+  .dark .contenedor {
+    background-image: url("../img/portada-bn.jpg"); }
+    .dark .contenedor h1, .dark .contenedor .h1,
+    .dark .contenedor p {
+      color: #f7f7f7; }
+    .dark .contenedor p {
+      background-color: rgba(0, 0, 0, 0.404); }
+  .dark #shop {
+    background-image: url("../img/portada-shop-bn.jpg"); }
+  .dark #us {
+    background-image: url("../img/portada-us-bn.jpg"); }
+  .dark #branch {
+    background-image: url("../img/portada-branches-bn.jpg"); }
 
 #logoAnimate {
+  display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 5rem; }
 
 main .contenedor {
-  background-image: url("../img/portada-wine.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-image: url("../img/portada-wine.jpg"); }
   main .contenedor h1, main .contenedor .h1 {
     color: rgba(0, 0, 0, 0.801);
     font-size: 50px;
     padding-top: 300px;
     text-align: center; }
+    @media screen and (max-width: 425px) {
+      main .contenedor h1, main .contenedor .h1 {
+        padding-top: 250px; } }
   main .contenedor p {
     color: rgba(0, 0, 0, 0.801);
     font-size: 18px;
     text-align: center;
     padding-left: 1.5rem;
     font-weight: 600; }
+    @media screen and (max-width: 425px) {
+      main .contenedor p {
+        padding-left: 0;
+        font-size: 15px; } }
+
+main #shop {
+  background-image: url("../img/portada-shop.jpg"); }
 
 main .frase {
   padding: 200px 200px 100px;
   text-align: center; }
   main .frase h2, main .frase .h2 {
     font-size: 50px; }
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     main .frase {
-      padding: 100px 20px; } }
+      padding: 200px 20px; } }
 
 main .container {
   text-align: center;
-  margin-top: 5rem; }
+  margin-top: 200px; }
   main .container h2, main .container .h2 {
     margin-bottom: 1rem; }
   main .container .row {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: none;
     width: 100%;
     margin: 0; }
     main .container .row .total {
-      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: none;
+      text-align: center;
       width: 100%; }
     main .container .row .card {
       padding: 1rem; }
       main .container .row .card .card-body {
-        color: black;
+        color: #000;
         background-color: #f7f7f7;
         border-radius: 5px;
-        border: 1px black solid; }
+        border: 1px #000 solid; }
         main .container .row .card .card-body h5, main .container .row .card .card-body .h5 {
           visibility: visible;
-          font-size: 18px;
           margin-top: 10px; }
 
 main #next {
@@ -8209,12 +8253,12 @@ main #next {
   margin-top: 8rem; }
 
 main #view {
-  justify-content: space-evenly;
   margin-top: 1.5rem;
-  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-wrap: wrap;
   text-align: center; }
   main #view .deluxe img {
     width: 250px;
@@ -8224,9 +8268,13 @@ main #current {
   margin-top: 200px;
   text-align: center;
   padding: 0 200px; }
+  @media screen and (max-width: 768px) {
+    main #current {
+      padding: 0;
+      margin-top: 100px; } }
   main #current button {
     margin-top: 2rem;
-    background: black;
+    background: #000;
     border-style: none;
     border-radius: 200px;
     padding: 0.7rem; }
@@ -8237,55 +8285,61 @@ main #current {
     margin-bottom: 2rem; }
   main #current #wines {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; }
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: none;
+    flex-wrap: wrap; }
     main #current #wines img {
       width: 250px; }
     main #current #wines h3, main #current #wines .h3 {
       padding-top: 1rem; }
 
-.sucursal-portada {
-  background-image: url("../img/Aesop_Wines_01.jpg");
-  height: 100vh;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover; }
+#branch {
+  background-image: url("../img/portada-branches.jpg");
+  background-position: bottom; }
 
 .sucursales {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: none;
   padding-top: 8rem;
-  color: #ffffff;
+  color: #f7f7f7;
   text-align: center; }
   .sucursales .sucursal-1 {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    align-items: none; }
     @media screen and (max-width: 425px) {
       .sucursales .sucursal-1 {
         flex-direction: column; } }
     .sucursales .sucursal-1 .sucursal-texto {
       display: flex;
-      justify-content: center;
       flex-direction: column;
-      background-color: #000000; }
+      justify-content: center;
+      align-items: none;
+      background-color: #000;
+      padding: 50px; }
   .sucursales .sucursal-2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: none;
     padding-top: 3rem; }
     @media screen and (max-width: 425px) {
       .sucursales .sucursal-2 {
         flex-direction: column; } }
     .sucursales .sucursal-2 .sucursal-texto {
       display: flex;
-      justify-content: center;
       flex-direction: column;
-      background-color: #000000; }
+      justify-content: center;
+      align-items: none;
+      background-color: #000;
+      padding: 50px; }
   .sucursales .mapa {
     overflow: hidden;
-    border-bottom: 5px solid #000000;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.801);
     box-shadow: 10px 17px 14px -2px rgba(171, 171, 171, 0.6);
     -webkit-box-shadow: 10px 17px 14px -2px rgba(171, 171, 171, 0.6);
     -moz-box-shadow: 10px 17px 14px -2px rgba(171, 171, 171, 0.6); }
@@ -8298,17 +8352,13 @@ main #current {
           width: 100%;
           height: 100%; } }
 
-main .us-portada {
-  background-image: url("../img/Aesop_Wines_01.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+main #us {
+  background-image: url("../img/portada-us.jpg"); }
 
 main .us-info {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 0 100px; }
   @media screen and (max-width: 768px) {
@@ -8347,18 +8397,22 @@ main .frase-destacada {
   flex-wrap: wrap; }
   @media screen and (max-width: 425px) {
     main .frase-destacada {
-      padding: 0 30px; } }
+      padding: 0 30px;
+      margin: 200px 0; } }
 
-.contact-body {
-  background: #ebebeb; }
-  .contact-body .contact-main {
+.contact-body .contact-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 160px; }
+  @media screen and (max-width: 425px) {
+    .contact-body .contact-main {
+      padding-top: 100px; } }
+  .contact-body .contact-main .contact-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 200px; }
-    .contact-body .contact-main .contact-text {
-      display: flex;
-      flex-direction: column;
-      padding: 50px;
-      align-items: center;
-      text-align: center; }
+    padding: 50px;
+    text-align: center; }

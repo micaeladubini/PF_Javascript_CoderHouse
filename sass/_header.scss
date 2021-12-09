@@ -1,139 +1,147 @@
 body {
-  font-family: "Quicksand", sans-serif;
-  height: 100%;
+    font-family: "Quicksand", sans-serif;
+    height: 100%;
 }
 a {
-  color: white;
+    color: $colorPrincipal;
 }
 
 .header {
-  background-color: #fb9e84a4;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-
-  img {
-    width: 120px;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-  }
-  li {
-    a {
-      display: flex;
-      justify-content: center;
-      padding: 0px 20px 30px 20px;
-      text-decoration: none;
-      color: white;
-      &:hover {
-        color: rgba(0, 0, 0, 0.801);
-        font-weight: 700;
-      }
+    background-color: #fb9e84a4;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    img {
+        width: 120px;
     }
-  }
-  .menu-btn {
-    &:hover {
-      background-color: #f4f4f4;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
     }
-    display: none;
-    &:checked {
-      ~ {
-        .menu {
-          max-height: 400px;
-        }
-        .menu-icon {
-          .navicon {
-            background: transparent;
-            &:before {
-              transform: rotate(-45deg);
-            }
-            &:after {
-              transform: rotate(45deg);
-            }
-          }
-          &:not(.steps) {
-            .navicon {
-              &:before {
-                top: 0;
-              }
-              &:after {
-                top: 0;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
-    padding: 10px 20px;
-    text-decoration: none;
-  }
-  .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-  }
-  .menu-icon {
-    cursor: pointer;
-    display: inline;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-    .navicon {
-      background: rgb(255, 255, 255);
-      display: block;
-      height: 2px;
-      position: relative;
-      transition: background 0.2s ease-out;
-      width: 18px;
-      &:before {
-        background: rgb(255, 255, 255);
-        content: "";
-        display: block;
-        height: 100%;
-        position: absolute;
-        transition: all 0.2s ease-out;
-        width: 100%;
-        top: 5px;
-      }
-      &:after {
-        background: rgb(255, 255, 255);
-        content: "";
-        display: block;
-        height: 100%;
-        position: absolute;
-        transition: all 0.2s ease-out;
-        width: 100%;
-        top: -5px;
-      }
-    }
-  }
-}
-@media (min-width: 48em) {
-  .header {
     li {
-      float: left;
-      margin: 10px 10px 0px 0px;
-      a {
-        padding: 20px 30px;
-      }
+        a {
+            display: flex;
+            justify-content: center;
+            padding: 0 20px 30px;
+            text-decoration: none;
+            color: $colorPrincipal;
+            &:hover {
+                color: $colorTerciario;
+                font-weight: 700;
+            }
+        }
+    }
+    .menu-btn {
+        &:hover {
+            background-color: $colorPrincipal;
+        }
+        display: none;
+        &:checked {
+            ~ {
+                .menu {
+                    max-height: 400px;
+                }
+                .menu-icon {
+                    .navicon {
+                        background: transparent;
+                        &:before {
+                            transform: rotate(-45deg);
+                        }
+                        &:after {
+                            transform: rotate(45deg);
+                        }
+                    }
+                    &:not(.steps) {
+                        .navicon {
+                            &:before {
+                                top: 0;
+                            }
+                            &:after {
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 10px 20px;
+        text-decoration: none;
     }
     .menu {
-      clear: none;
-      float: right;
-      max-height: none;
+        clear: both;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
     }
     .menu-icon {
-      display: none;
+        cursor: pointer;
+        display: inline;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+        .navicon {
+            background: rgb(255, 255, 255);
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background 0.2s ease-out;
+            width: 18px;
+            &:before {
+                background: $colorPrincipal;
+                content: "";
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all 0.2s ease-out;
+                width: 100%;
+                top: 5px;
+            }
+            &:after {
+                background: $colorPrincipal;
+                content: "";
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all 0.2s ease-out;
+                width: 100%;
+                top: -5px;
+            }
+        }
     }
-  }
+}
+@media(min-width: 48em) {
+    .header {
+        li {
+            float: left;
+            margin: 10px 10px 0 0;
+            a {
+                padding: 20px 30px;
+            }
+        }
+        .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+        .menu-icon {
+            display: none;
+        }
+    }
+}
+
+.dark {
+    #h1 {
+        label {
+            background-color: $black;
+            border-radius: 100px;
+        }
+    }
 }
